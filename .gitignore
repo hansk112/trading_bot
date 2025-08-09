@@ -1,2 +1,5 @@
 # ignore environment
-~/trading_bot/bot_venv/
+bot_venv/
+
+# ignore secrets
+secrets.json

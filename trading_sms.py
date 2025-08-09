@@ -1,12 +1,24 @@
 import yfinance as yf
 import time
 from twilio.rest import Client
+import json
+
+with open('/home/hans/Documents/trading_bot/secrets.json') as f:
+    secrets = json.load(f)
+
+# Load Twilio credentials from secrets.json
+account_sid = secrets.get("account_sid", "")
+auth_token = secrets.get("auth_token", "")
+twilio_number = secrets.get("twilio_number","")  # Your Twilio number
+recipient_number = secrets.get()  # Your mobile number
+
+print(account_sid)
+print(auth_token)
 
 # Twilio configuration
-account_sid = ""
-auth_token =  ""
-twilio_number = "+64d221009858"  # Your Twilio number
-recipient_number = "+64221009858"  # Your mobile number
+# account_sid = ""
+# auth_token =  ""
+
 
 client = Client(account_sid, auth_token)
 
