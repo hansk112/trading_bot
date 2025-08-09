@@ -3,8 +3,8 @@ import time
 from twilio.rest import Client
 
 # Twilio configuration
-account_sid = "AC0fa5e66f3dc7c7d1d872d9d9e22e04fe"
-auth_token = "4e5eb9ef998c5ffe349cb2bb1640b6df"
+account_sid = ""
+auth_token =  ""
 twilio_number = "+64d221009858"  # Your Twilio number
 recipient_number = "+64221009858"  # Your mobile number
 
