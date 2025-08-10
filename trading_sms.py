@@ -3,14 +3,14 @@ import time
 from twilio.rest import Client
 import json
 
-with open('/home/hans/Documents/trading_bot/secrets.json') as f:
+with open('/home/hans/Repositories/trading_bot/secrets.json') as f:
     secrets = json.load(f)
 
 # Load Twilio credentials from secrets.json
 account_sid = secrets.get("account_sid", "")
 auth_token = secrets.get("auth_token", "")
 twilio_number = secrets.get("twilio_number","")  # Your Twilio number
-recipient_number = secrets.get()  # Your mobile number
+recipient_number = secrets.get("recipient_number","")  # Your mobile number
 
 print(account_sid)
 print(auth_token)
@@ -23,7 +23,7 @@ print(auth_token)
 client = Client(account_sid, auth_token)
 
 # Trading configuration
-ticker = "AAPL"
+ticker = "MSFT"
 buy_price = 170.00
 sell_price = 190.00
 check_interval = 3600  # seconds
